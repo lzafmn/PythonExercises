@@ -1,0 +1,27 @@
+import tkinter
+root = tkinter.Tk()
+root.geometry('+0+0')
+label1 = tkinter.Label(root, text = 'User Name:').pack()
+entry1 = tkinter.Entry(root).pack()
+label2 = tkinter.Label(root, text = 'Password:').pack()
+entry2 = tkinter.Entry(root).pack()
+button1 = tkinter.Button(root, command=root.destroy, text = 'Login').pack()
+button2 = tkinter.Button(root, command=root.destroy, text = 'Register').pack()
+root.mainloop()
+##from tkinter import*
+##root = Tk()
+##C_entry = Entry(root, width=4)
+##C_entry.pack(side='left')
+##Cunit_label = Label(root, text='Celsius')
+##Cunit_label.pack(side='left')
+##def compute():
+##    C = float(C_entry.get())
+##    F = (9./5)*C + 32
+##    F_label.configure(text='%g' % F)
+##compute = Button(root, text=' is ', command=compute)
+##compute.pack(side='left', padx=4)
+##F_label = Label(root, width=4)
+##F_label.pack(side='left')
+##Funit_label = Label(root, text='Fahrenheit')
+##Funit_label.pack(side='left')
+##root.mainloop()

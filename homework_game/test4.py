@@ -1,0 +1,20 @@
+##import tkinter
+##root = tkinter.Tk()
+##root.title('画布显示图片')
+##root.geometry('800x600')
+##cv = tkinter.Canvas(root, bg = 'white', width = 700, height = 600)
+##joker = tkinter.PhotoImage(file = "images\\BJoker.gif")
+##image = cv.create_image(100, 100, image = joker)
+##cv.pack()
+##root.mainloop()
+from tkinter import *
+root = Tk()
+w = Canvas(root, bg = 'white', width = 400, height = 200)
+w.pack()
+def paint(event):
+    x1, y1 = (event.x -1),(event.y -1)
+    x2, y2 = (event.x +1),(event.y +1)
+    w.create_oval(x1, y1, x2, y2, fill = 'red')
+w.bind("<B1-Motion>", paint)
+Label(root, text = 'keydown your mouse and move').pack(side = BOTTOM)
+mainloop()

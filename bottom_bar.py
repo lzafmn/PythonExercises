@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+import tkinter as tk
+
+root = tk.Tk()
+root.geometry('300x600')
+cv = tk.Canvas(root, background='white',width=300,height=60)
+cv.create_text(40,53,text="消息")
+cv.create_text(115,53,text="消息")
+cv.create_text(190,53,text="消息")
+cv.create_text(265,53,text="消息")
+cv.pack(side=tk.BOTTOM)
+defaultImg = tk.PhotoImage(file='icons\\default.png')
+button1 = tk.Button(cv, image = defaultImg, anchor = tk.S)
+button1.pack()
+button1.place(width=50,height=40,relx=0.05,rely=0.05)
+button2 = tk.Button(cv, image = defaultImg, anchor = tk.S)
+button2.pack()
+button2.place(width=50,height=40,relx=0.3,rely=0.05)
+button3 = tk.Button(cv, image = defaultImg, anchor = tk.S)
+button3.pack()
+button3.place(width=50,height=40,relx=0.55,rely=0.05)
+button4 = tk.Button(cv, image = defaultImg, anchor = tk.S)
+button4.pack()
+button4.place(width=50,height=40,relx=0.8,rely=0.05)
+root.mainloop()
+
